@@ -1,0 +1,44 @@
+<?php
+
+/**
+ * Implements hook_update_N().
+ */
+function vbutility_update_9507(&$sandbox) {
+    $schema['form_data'] = [
+        'description' => 'custom module data.',
+        'fields' => [
+          'id' => [
+            'description' => 'The id this record affects.',
+            'type' => 'serial',
+            'unsigned' => TRUE,
+            'not null' => TRUE,
+            'size' => 'small',
+          ],
+          'name' => [
+            'description' => 'The identifier of the data.',
+            'type' => 'varchar',
+            'length' => 128,
+            'not null' => TRUE,
+            'default' => '',
+          ],
+          'age' => [
+            'type' => 'int',
+            'length' => 100,
+            'unsigned' => TRUE,
+            'not null' => TRUE,
+            'default' => 0,
+          ],
+          'address' => [
+            'type' => 'varchar',
+            'length' => 150,
+            'not null' => TRUE,
+            'default' => '',
+          ],
+        ],
+        'primary key' => ['id'],
+      ];
+
+      \Drupal::database()->schema()->createTable('form_data', $schema['form_data']);
+      return $schema;
+
+}

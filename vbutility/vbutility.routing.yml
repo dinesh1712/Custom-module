@@ -1,0 +1,24 @@
+mymodule.notification:
+  path: "/utility"
+  defaults:
+    _controller: '\Drupal\vbutility\controller\getDetails::getSites'
+    _title: "Page"
+  requirements:
+    _permission: 'access content'
+
+mymodule.noti:
+  path: "/allusers"
+  defaults:
+    _controller: '\Drupal\vbutility\controller\getDetails::getUse'
+    _title: "Users"
+  requirements:
+    _permission: 'access content'
+
+student_registration.studentRegistration:
+  path: '/form'
+  defaults:
+    _form: '\Drupal\vbutility\Form\DataForm'
+    _title: 'Details'
+  requirements:
+    _permission: 'access content'
+    _access: 'TRUE'

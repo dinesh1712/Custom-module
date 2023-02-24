@@ -1,0 +1,11 @@
+mymodule.password_reset:
+  route_name: mymodule.notification
+  title: "Articles"
+  menu_name: main
+  weight: 100
+
+mymodule.password:
+  route_name: mymodule.noti
+  title: "Users"
+  menu_name: main
+  weight: 200

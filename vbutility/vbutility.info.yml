@@ -1,0 +1,5 @@
+name: "vbutility"
+type: module
+core_version_requirement: ^8||^9||^10
+description: "Code to implement"
+package: "Custom"

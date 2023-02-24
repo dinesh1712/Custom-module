@@ -1,0 +1,8 @@
+services:
+  vbutility.Firstservice:
+    class: Drupal\vbutility\services\MyService
+    arguments: ['@entity_type.manager']
+  vbutility.event_subscriber_example:
+    class: Drupal\vbutility\EventSubscriber\ExampleEventSubScriber
+    tags:
+      - { name: 'event_subscriber' }
